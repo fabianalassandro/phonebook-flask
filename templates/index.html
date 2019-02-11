@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Phonebook</title>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>    
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/static/dist/cssans.min.js"></script>
+       
+       
+    <!-- CSS -->   
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/dist/cssans.min.css " rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> 
+       
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
+    <link rel="manifest" href="static/images/site.webmanifest">
+    <link rel="mask-icon" href="static/images/safari-pinned-tab.svg" color="#1f3368">
+    <link rel="shortcut icon" href="static/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="static/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+ 
+   
+</head>
+
+    
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark background-color-blue static-top">
+    <div class="container">
+      
+      <a class="navbar-brand" href="/"><i class="fas fa-book-open"></i> Phonebook</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="people">People</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="business">Business</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+    <div class="container mt-5">
+        <div class="row">
+        {% block content %}
+            <div class="col-lg-12 text-center">
+            <h1 id="foo" class="mt-5">Phonebook</h1>
+            <p class="lead mt-5">People and business at your fingertips.</p>
+        </div>
+        
+        <div class="mx-auto mt-3">
+            <a href="people"><button class="btn btn-lg background-color-blue">Find People</button></a>
+            <a href="business"><button class="btn btn-lg background-color-blue">Find Business</button></a>
+        </div>    
+                  
+        {% endblock %}
+    </div>
+        
+    <section class="d-flex justify-content-center p-2 bd-highlight ">             
+    <div class="card mt-5 mr-2" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Open chocolate box on a table.">
+        <div class="card-body">
+            <h5 class="card-title">Send some joy</h5>
+            <p class="card-text">Chocolate is always the right choice! Send some joy and you're not gonna to regret it.</p>
+            <a href="https://www.ameliechocolat.co.uk/categories/Promotions/Best-Sellers/" class="btn background-color-blue">Send it now!</a>
+        </div>
+    </div> 
+
+     
+    <div class="card mt-5 mr-2" style="width: 18rem;">
+        <img src="    https://images.unsplash.com/photo-1513321383621-cbadb449670f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Letters, envelopes and card on table.">
+        <div class="card-body">
+            <h5 class="card-title">Send a card</h5>
+            <p class="card-text">Is it a special day? Send a personalised card to your special one! </p>
+            <a href="https://www.funkypigeon.com/personalised-cards.aspx" class="btn background-color-blue">Send it now!</a>
+        </div>      
+    </div>   
+        
+    <div class="card mt-5" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="A wooden table with on top an espresso coffee served in a ceramic white small cup.">
+        <div class="card-body">
+            <h5 class="card-title">Send a cup of coffee</h5>
+            <p class="card-text">OMG! It's Monday. Be kind, send some energy and be ready to receive tons of love!</p>
+            <a href="https://www.starbucks.co.uk/shop/card/egift" class="btn background-color-blue">Send it now!</a>
+        </div>      
+    </div>            
+    </section>    
+              
+  </div>
+
+    <footer class="mt-5 py-3 background-color-orange">
+      <div class="container">
+        <span>© 2019 - Fabiana, Iza and Martina</span>
+      </div>
+    </footer>
+
+<script>
+  $(document).ready(function () {
+       $('#example').DataTable();
+   });
+   
+    var element = document.getElementById('foo');
+    var text = element.innerText;
+    CSSans(element, text);
+</script>  
+
+  
+</body>
+
+</html>

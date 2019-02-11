@@ -1,0 +1,42 @@
+.page-link{
+    color: #2bd0f7
+}
+
+
+.cssans\:e:hover{
+    left: 44px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+.btn{
+    color: rgba(255,255,255,.5);
+}
+
+.btn:hover{
+    color: rgba(255,255,255,.75);
+}
+
+.background-color-blue{
+    background-color: #1f3368
+}
+
+.background-color-orange{
+    background-color: #ff5c5c
+}
+
+.page-item.active .page-link{
+    background-color: #2bd0f7;
+    border-color: #2bd0f7;
+}
+
+img{
+    max-height: 350px;
+}
+
+footer{
+    color: #fff
+}
+

@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div id="find-people">
+   <form method="post" action="/peoplesresult">
+     <label for="people">Who are you looking for? </label>
+     <input type="text" id="people-name" name="peoplename" required="required" placeholder="Enter Surname">
+     <input type="text" id="location" name="locationpeople" required="required" placeholder="Enter Postcode">
+     <input type="submit" id="submit-button" class="m-1 btn background-color-blue" name="submit" value="Submit">
+   </form>
+ </div>
+
+<div class="row mt-5">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+        <table id="example" class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Postcode</th>
+                <th>Telephone</th>
+            </tr>
+            
+            </thead>
+            <tbody>
+            {% for row in ppl %}
+            <tr>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+                <td>{{row[7]}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>    
+</div>        
+{% endblock %}
